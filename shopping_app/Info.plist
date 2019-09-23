@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>fonts</key>
+	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>lineto-circular-black.ttf</string>
+		<string>lineto-circular-pro-bold.ttf</string>
+		<string>lineto-circular-pro-book.ttf</string>
+		<string>lineto-circular-pro-medium.ttf</string>
+		<string>Poppins-Light_0.ttf</string>
+		<string>Poppins-Medium_0.ttf</string>
+		<string>Poppins-Regular_0.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
