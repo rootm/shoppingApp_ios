@@ -10,12 +10,24 @@ import Foundation
 
 class productModel {
     var name: String
+    var user: String
     var description: String
     var price: String
+    var photos: String
+    var location: String
     
-    init(name: String, description: String, price: String) {
+
+convenience init() {
+        self.init()
+    }
+    
+    init(name: String, user: String, description: String, price: String, photos: String, location: String) {
         self.name = name
         self.description = description
         self.price = price
+        self.photos = photos
+        self.location = location
+        self.user=user
+
     }
 }

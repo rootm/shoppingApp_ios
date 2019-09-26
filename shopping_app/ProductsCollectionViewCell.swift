@@ -10,4 +10,7 @@ import UIKit
 
 class ProductsCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var productImage: UIImageView!
+    @IBOutlet var productName: UILabel!
+    
 }

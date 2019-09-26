@@ -18,17 +18,19 @@ class DbStore {
     
     var insertEntryStmt: OpaquePointer?
     var readEntryStmt: OpaquePointer?
+    var readAllEntryStmt: OpaquePointer?
+
     var updateEntryStmt: OpaquePointer?
     var deleteEntryStmt: OpaquePointer?
     
-    let oslog = OSLog(subsystem: "codewithayush", category: "sqliteintegration")
+    let oslog = OSLog(subsystem: "muvindu", category: "sqliteintegration")
     
     init() {
         do {
             do {
                 dbURL = try FileManager.default
                     .url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-                    .appendingPathComponent("integration.db")
+                    .appendingPathComponent("product.db")
                 os_log("URL: %s", dbURL.absoluteString)
             } catch {
                 //TODO: Just logging the error and returning empty path URL here. Handle the error gracefully after logging
@@ -71,10 +73,15 @@ class DbStore {
         
         // create the table to store the entries.
         // ID | Name | Employee Id | Designation
-        let ret =  sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS Records (id INTEGER UNIQUE PRIMARY KEY AUTOINCREMENT, Name TEXT NOT NULL, EmployeeID TEXT UNIQUE NOT NULL, Designation TEXT NOT NULL)", nil, nil, nil)
+        
+       
+        
+        let ret =  sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS ProductsTable (id INTEGER UNIQUE PRIMARY KEY AUTOINCREMENT, name VARCHAR(255), user VARCHAR(255), description VARCHAR(255), price VARCHAR(255) NOT NULL, photos VARCHAR(255), location VARCHAR(255))", nil, nil, nil)
         if (ret != SQLITE_OK) { // corrupt database.
-            logDbErr("Error creating db table - Records")
-            throw SqliteError(message: "unable to create table Records")
+            logDbErr("Error creating db table - Products")
+            throw SqliteError(message: "unable to create table Products")
+        }else{
+            logDbErr("xxxxxxxxxxxxxxxxx")
         }
         
     }

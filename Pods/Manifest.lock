@@ -1,16 +1,32 @@
 PODS:
   - Alamofire (4.9.0)
+  - BSGridCollectionViewLayout (1.2.5)
+  - BSImagePicker (2.10.2):
+    - BSGridCollectionViewLayout (= 1.2.5)
+    - BSImageView (= 1.0.3)
+  - BSImageView (1.0.3)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - BSImagePicker (~> 2.8)
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - BSGridCollectionViewLayout
+    - BSImagePicker
+    - BSImageView
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  BSGridCollectionViewLayout: 333dcb457a5a3bdd9212607ab5756553dcfe06cb
+  BSImagePicker: f7228c1e1abc1fa850248fd0e8018e0ccc19148a
+  BSImageView: a149459433a2687157d034c78e059d30ac7f2544
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 439e5963131d9ecda223299b03ba28242355a5cf
+PODFILE CHECKSUM: 001287763464bf90a3ba9267dc44da61fb14f4dd
 
 COCOAPODS: 1.7.5

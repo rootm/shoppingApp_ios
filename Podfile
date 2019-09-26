@@ -7,6 +7,8 @@ target 'shopping_app' do
 
   # Pods for shopping_app
   pod 'Alamofire', '~> 4.7'
+  pod "BSImagePicker", "~> 2.8"
+  pod 'SwiftyJSON', '~> 4.0'
 
   target 'shopping_appTests' do
     inherit! :search_paths
