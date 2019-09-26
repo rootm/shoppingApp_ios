@@ -324,6 +324,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="openLocation:" destination="95O-do-w7m" eventType="touchUpInside" id="p0G-IL-pj9"/>
+                                    <segue destination="esP-A2-S6o" kind="show" id="x1e-6S-s3f"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1y-yi-HX7">
@@ -342,11 +343,36 @@
                         <outlet property="productImages" destination="htP-8c-x9x" id="3BB-ET-LsJ"/>
                         <outlet property="productName" destination="Mrp-n7-nY6" id="3c6-OU-9xQ"/>
                         <outlet property="productPrice" destination="jdc-uV-moN" id="FzV-gb-ixM"/>
+                        <segue destination="esP-A2-S6o" kind="show" id="euv-Vc-vlE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEw-XJ-Eun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5802.3999999999996" y="23.838080959520241"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="qjo-yc-nBc">
+            <objects>
+                <viewController id="esP-A2-S6o" customClass="MapViewController" customModule="shopping_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DfV-C4-25e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4Y7-2J-Iju">
+                                <rect key="frame" x="0.0" y="64" width="392" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qNl-Pj-bJZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="4Y7-2J-Iju" id="RLc-Go-4bD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXH-He-smq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6548" y="23.838080959520241"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="nzt-p8-hsy">
@@ -526,6 +552,7 @@
         <image name="placeholder" width="1040" height="584"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="x1e-6S-s3f"/>
         <segue reference="o2m-d0-hg1"/>
         <segue reference="c2o-JZ-SQR"/>
     </inferredMetricsTieBreakers>
